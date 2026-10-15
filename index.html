@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8085 Microprocessor Virtual Lab</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>8085 Virtual Lab</h1>
+    <p>Microprocessor Learning Simulator</p>
+  </header>
+
+  <main class="dashboard">
+    <section class="panel">
+      <h2>Arithmetic Calculator</h2>
+
+      <label for="num1">First number (0–255)</label>
+      <input id="num1" type="number" min="0" max="255" value="10">
+
+      <label for="num2">Second number (0–255)</label>
+      <input id="num2" type="number" min="0" max="255" value="3">
+
+      <label for="operation">Operation</label>
+      <select id="operation">
+        <option value="ADD">Addition</option>
+        <option value="SUB">Subtraction</option>
+        <option value="MUL">Multiplication</option>
+        <option value="DIV">Division</option>
+      </select>
+
+      <div class="buttons">
+        <button id="runBtn">Run</button>
+        <button id="stepBtn">Step</button>
+        <button id="resetBtn">Reset</button>
+      </div>
+
+      <p id="status">Ready to execute</p>
+    </section>
+
+    <section class="panel">
+      <h2>CPU Registers</h2>
+      <div id="registers" class="register-grid"></div>
+      <h3>Flags</h3>
+      <div id="flags"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Assembly Instructions</h2>
+      <pre id="assembly">Select an operation to begin.</pre>
+    </section>
+
+    <section class="panel">
+      <h2>Memory Viewer</h2>
+      <div id="memory"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Output</h2>
+      <p id="result">No result yet</p>
+      <p id="details"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b1220;
+  color: #e8eef9;
+}
+
+.topbar {
+  padding: 24px;
+  text-align: center;
+  background: #14243d;
+  border-bottom: 2px solid #3478f6;
+}
+
+.topbar h1 {
+  margin: 0 0 8px;
+  color: #65a4ff;
+}
+
+.topbar p {
+  margin: 0;
+  color: #b5c5dc;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  padding: 24px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.panel {
+  min-width: 0;
+  padding: 20px;
+  background: #142036;
+  border: 1px solid #2b4162;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px #0003;
+}
+
+.panel h2 {
+  margin-top: 0;
+  color: #79b2ff;
+}
+
+label {
+  display: block;
+  margin: 14px 0 7px;
+}
+
+input, select {
+  width: 100%;
+  padding: 11px;
+  border-radius: 7px;
+  border: 1px solid #405573;
+  background: #0b1527;
+  color: white;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+button {
+  flex: 1;
+  padding: 11px;
+  border: none;
+  border-radius: 7px;
+  background: #3478f6;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #5590ff;
+}
+
+.register-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.register {
+  padding: 12px 4px;
+  text-align: center;
+  background: #0b1527;
+  border: 1px solid #304563;
+  border-radius: 8px;
+}
+
+.register strong {
+  display: block;
+  color: #8bbcff;
+  margin-bottom: 7px;
+}
+
+#assembly, #memory {
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+  font-family: Consolas, monospace;
+  line-height: 1.8;
+}
+
+.active-instruction {
+  color: #8dffb0;
+  background: #173c32;
+}
+
+#status {
+  color: #8dffb0;
+}
+
+@media (max-width: 700px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+
+  .panel {
+    padding: 14px;
+  }
+}
